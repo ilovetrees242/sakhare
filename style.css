@@ -102,16 +102,6 @@ nav{
     visibility: visible;
     box-shadow: 5px 5px 1000px 10px white;
 }
-img{
-float: right;
-transform: translateY(-150px);
-width: 250px;
-height: 300px;
-border-top-left-radius: 25px;
-border-bottom-left-radius: 25px;
-box-shadow: 0px 0px 45px white;
-visibility: hidden;
-}
 .something{
     height: 50px;
     width: 300px;
