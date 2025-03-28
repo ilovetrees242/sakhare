@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+body{
+    margin: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: black;
+}
+nav{
+    background-color: transparent;
+    max-height: 100%;
+    max-width: 100%;
+    overflow: Hidden;
+    position: static;
+    margin: auto;
+    
+}
+nav ul{
+    display: flex;
+    justify-content: center;
+    background-color: transparent;
+}                     
+nav ul li{
+    display: inline-flex;
+    padding: 15px;
+    padding-right: 50px;
+    letter-spacing: 2px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    filter: blur(5);
+    transition: transform 0.5s ease-in-out;
+}
+nav ul li a{
+    text-decoration: none;
+    color: rgb(247, 244, 244);
+    font-weight: 100;
+    padding: 0px 25px;
+    font-family: Verdana, sans-serif;
+    text-shadow: 0px 0px 15px white;
+    transition: text-shadow 2s ease;
+}
+nav ul li a:hover{
+    text-shadow: 0px 0px 5px white;
+    -webkit-text-stroke-width: 0.5px;
+    -webkit-text-stroke-color: white;
+    animation: goofy 4s ease-in-out infinite;
+}
+@keyframes  goofy{
+    0%{text-shadow: 0px 0px 10px rgb(255, 246, 255);}
+    50%{text-shadow: 0px 0px 20px 0px 0px 20px 0px 0px 20px rgb(255, 255, 255);}
+    0%{text-shadow: 0px 0px 10px rgb(255, 246, 255);}
+}
+nav ul li:hover{
+    transform: scale(2, 2);
+}
+h1{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 10000;
+    margin: 25px;
+    -webkit-text-stroke: 2px #ffffff;
+    color: white;
+    font-size: 75px;
+}
+p{
+    margin: 25px;
+    color: white;
+    font-weight: 1000;
+    font-size: 25px;
+    font-family: Roboto, Geneva, Tahoma, sans-serif;
+    margin-inline: 25px;
+    float: left;
+    max-width: 40%;
+    overflow: hidden;
+    position: absolute;
+    word-spacing: 5px;
+}
+@media only screen and (max-width: 600px) {
+    nav{
+        padding: 0px;
+    }
+    nav ul li{
+        padding: 0;
+    }
+    nav ul li:nth-child(4){
+        transform: translateX(-35px);
+    }
+  }
+
+nav{
+    box-shadow: black, 5px 5px 5px;
+}
+.what{
+    color: rgb(117, 67, 255);
+    -webkit-text-stroke-width: 0px;
+    text-shadow: 5px 5px 25px;
+}
+#hello{
+    height: 0px;
+    width: 100%;
+    background-color: transparent;
+    float: left;
+    overflow: hidden;
+    position: fixed;
+    visibility: visible;
+    box-shadow: 5px 5px 1000px 10px white;
+}
+img{
+float: right;
+transform: translateY(-150px);
+width: 250px;
+height: 300px;
+border-top-left-radius: 25px;
+border-bottom-left-radius: 25px;
+box-shadow: 0px 0px 45px white;
+visibility: hidden;
+}
+.something{
+    height: 50px;
+    width: 300px;
+    background-image: linear-gradient(45deg, rgb(49, 34, 249), rgb(132, 0, 255), rgb(255, 255, 255));
+    display: flex;
+    border-radius: 10px;
+    margin-top: 200px;
+    margin-left: 500px;
+    animation: frames 5s ease-in-out infinite;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    align-content: center;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    background-size: auto;
+    box-shadow: 0px 0px 25px rgb(132, 0, 255), 0px 0px 25px rgb(53, 0, 244);
+    
+}
+@keyframes frames {
+    0%{background-position: 50px, 300px; box-shadow: 0px 0px 25px rgb(132, 0, 255), 0px 0px 25px rgb(53, 0, 244);}
+
+    50%{background-position: 500px, 100px; box-shadow: 0px 0px 50px rgb(53, 0, 244);}
+
+    100%{background-position: 50px, 300px; box-shadow: 0px 0px 25px rgb(132, 0, 255), 0px 0px 25px rgb(53, 0, 244);}
+}
+.something > a{
+    align-self: center;
+    text-decoration: none;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: white;
+    font-weight: 250px;
+}
