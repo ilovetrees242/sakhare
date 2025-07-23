@@ -3,7 +3,7 @@ body{
     padding: 0;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-weight: lighter;
-    background-color: black;
+    background-color: linear-gradient(45deg, rgb(98, 0, 255), black;
 }
 .Container1{
     background: linear-gradient(45deg, rgba(0, 17, 255, 0), rgb(98, 0, 255));
