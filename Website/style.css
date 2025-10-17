@@ -1,0 +1,72 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: lighter;
+    background-color: black;
+}
+.Container1{
+    background: linear-gradient(45deg, rgba(0, 17, 255, 0), rgb(98, 0, 255));
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+.introduction{
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: white;
+}
+.Container2{
+    margin-left: 25px;
+
+}
+.Container2 > p{
+    font-size: 25px;
+    color: white;
+}
+.Container2 > .button{
+    background: linear-gradient(90deg,rgba(255, 0, 0, 0), rgb(111, 0, 255));
+    padding: 15px;
+    width: 7%;
+    border-radius: 5px;
+    animation: AnimationBackground infinite 2s ease-in-out;
+    background-size: cover;
+    background-repeat: no-repeat;
+    transition: 2s;
+}
+@keyframes AnimationBackground {
+    0%{background-position: 0px 0px;}
+
+    50%{background-position: 100px 0px;}
+
+    100%{background-position: 0px 0px;}
+
+}
+.Container2 > .button > a{
+    color: white;
+    text-decoration: none;
+}
+@keyframes AnimationBackground2 {
+    0%{background-position: 0px 0px;}
+
+    50%{background-position: 100px 0px;}
+
+    100%{background-position: 0px 0px;}
+
+}
+.Container2 > .button:hover{
+    animation: AnimationBackground infinite 5s ease;
+    padding: 50px;
+}
+table{
+    color: white;
+    width: 100%;
+    text-align: center;
+    border-collapse: collapse;
+    background: linear-gradient(45deg, black, rgb(98, 0, 255));
+}
+th{
+    background-color: rgb(98, 0, 255);
+}
+td, th{
+    padding: 25px;
+}
