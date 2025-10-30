@@ -23,6 +23,42 @@ body{
     font-size: 25px;
     color: white;
 }
+.navbar{
+    color: white;
+    float: center;
+    overflow: hidden;
+    background: radial-gradient(rgb(98, 0, 255), black); 
+}
+.navbar > ul{
+     display: flex;
+     justify-content: center;
+     align-items: center;
+}
+.navbar > ul > li:first-child{
+	padding-left: 250px;
+	border-bottom-left-radius: 10px;
+	border-top-left-radius: 10px;
+}
+.navbar > ul > li:last-child{
+	padding-right: 250px;
+	border-bottom-right-radius: 10px;
+	border-top-right-radius: 10px;
+}
+.navbar > ul > li > a{
+	text-decoration: none;
+	transition: 2s ease;
+}
+.navbar > ul > li > a:hover{
+	color: #a16ceb;
+	text-shadow: #a16ceb 0px 0px 5px;
+	cursor: pointer;
+}
+.navbar > ul > li{
+    list-style-type: none;
+    display: inline-flex;
+    padding: 20px;
+    background-color: rgb(98, 0, 255);
+}
 .Container2 > .button{
     background: linear-gradient(90deg,rgba(255, 0, 0, 0), rgb(111, 0, 255));
     padding: 15px;
