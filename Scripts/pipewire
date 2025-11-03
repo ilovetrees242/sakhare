@@ -1,0 +1,65 @@
+#!/bin/sh
+### BEGIN INIT INFO
+# Provides       : pipewire
+# Required-Start : $local_fs $syslog
+# Required-Stop  : $local_fs $syslog
+# Default-Start  : 2 3 4 5
+# Default-Stop   : 0 1 6 
+# Short-Description : Pipewire audio service
+# Description : To start stop or reboot pipewire daemons for desktop enviroments
+### END INIT INFO
+
+case "$1" in
+	start)
+		echo "Starting pipewire audio services.."
+		if [ ! -f /run/pw.pid ]; then
+			touch /run/pw.pid
+			for PROCESS in pipewire wireplumber pipewire-pulse ; do
+				/usr/bin/${PROCESS} > /dev/null 2>&1 &
+				sleep 1
+				echo $! >> /run/pw.pid
+			done
+		else
+			echo "Process already started!"
+		fi 
+	;;
+	stop)
+		if [ ! -f /run/pw.pid ]; then
+			echo "Process has not started!"
+		else
+			echo "Stopping pipewire daemons.."
+			for i in 1 2 3 ; do
+				kill $( head -n${i} /run/pw.pid | tail -n1 )
+				sleep 1
+			done
+			rm -f /run/pw.pid
+			echo "Finished."
+		fi
+	;;
+	restart)
+		if [ ! -f /run/pw.pid ]; then
+                        echo "Process has not started!"
+                else
+                        echo "Restarting pipewire daemons.."
+                        for i in 1 2 3 ; do
+                                kill $(head -n${i} /run/pw.pid | tail - n1)
+                        done
+                        rm /run/pw.pid
+			echo "Starting pipewire audio services.."
+                	if [ ! -f /run/pw.pid ]; then
+                        	touch /run/pw.pid
+                        	for PROCESS in pipewire wireplumber pipewire-pulse ; do
+                                	/usr/bin/${PROCESS} &
+                                	sleep 1
+                                	echo $1 >> /run/pw.pid
+                        	done
+			fi
+                fi		
+	;;
+	status)
+		ps aux | grep wire
+	;;
+	*)
+		echo "Usage: $0 start|stop|restart|status"
+	;;
+esac	
