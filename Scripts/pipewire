@@ -42,7 +42,7 @@ case "$1" in
                 else
                         echo "Restarting pipewire daemons.."
                         for i in 1 2 3 ; do
-                                kill $(head -n${i} /run/pw.pid | tail - n1)
+                                kill $(head -n${i} /run/pw.pid | tail -n1)
                         done
                         rm /run/pw.pid
 			echo "Starting pipewire audio services.."
@@ -51,7 +51,7 @@ case "$1" in
                         	for PROCESS in pipewire wireplumber pipewire-pulse ; do
                                 	/usr/bin/${PROCESS} &
                                 	sleep 1
-                                	echo $1 >> /run/pw.pid
+                                	echo $! >> /run/pw.pid
                         	done
 			fi
                 fi		
