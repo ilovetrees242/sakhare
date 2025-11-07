@@ -5,8 +5,12 @@ body{
     font-weight: lighter;
     background-color: black;
 }
+*{
+	font-weight: bold;
+	color: white;
+}
 .Container1{
-    background: linear-gradient(45deg, rgba(0, 17, 255, 0), rgb(98, 0, 255));
+    background: linear-gradient(45deg, black, #ECE6E9 );
     padding-top: 25px;
     padding-bottom: 25px;
 }
@@ -15,84 +19,160 @@ body{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     color: white;
 }
-.Container2{
-    margin-left: 25px;
-
-}
-.Container2 > p{
-    font-size: 25px;
-    color: white;
-}
 .navbar{
     color: white;
-    float: center;
+    margin: 0;
+    padding: 0;
     overflow: hidden;
-    background: radial-gradient(rgb(98, 0, 255), black); 
 }
 .navbar > ul{
      display: flex;
      justify-content: center;
      align-items: center;
 }
-.navbar > ul > li:first-child{
-	padding-left: 250px;
-	border-bottom-left-radius: 10px;
-	border-top-left-radius: 10px;
+.navbar > ul > div {
+     background: #161515;
+     padding: 5px;
+     border-radius: 10px;
 }
-.navbar > ul > li:last-child{
-	padding-right: 250px;
-	border-bottom-right-radius: 10px;
-	border-top-right-radius: 10px;
-}
-.navbar > ul > li > a{
+.navbar > ul > div > li > a {
+	text-align: center;
 	text-decoration: none;
+	color: #E0DADD;
+	width: 250px;
+	padding-bottom: 5px;
 	transition: 2s ease;
+	overflow: hidden;
 }
-.navbar > ul > li > a:hover{
-	color: #a16ceb;
-	text-shadow: #a16ceb 0px 0px 5px;
+.navbar > ul > div > li > a:hover{
 	cursor: pointer;
+	text-decoration: none;
 }
-.navbar > ul > li{
+.navbar > ul > div > li{
     list-style-type: none;
     display: inline-flex;
-    padding: 20px;
-    background-color: rgb(98, 0, 255);
+    padding-left: 50px;
+    padding-right: 50px;
 }
-.Container2 > .button{
-    background: linear-gradient(90deg,rgba(255, 0, 0, 0), rgb(111, 0, 255));
-    padding: 15px;
-    width: 7%;
-    border-radius: 5px;
-    animation: AnimationBackground infinite 2s ease-in-out;
-    background-size: cover;
-    background-repeat: no-repeat;
-    transition: 2s;
+/*   	This is the section related to the long bar things	*/
+
+/*	Start the container holding all the bars	*/
+.Container2 {
+    width: 75%;
+    border-radius: 25px;
+    display: flex;
+    margin: 25px;
+    height: 750px;
 }
-@keyframes AnimationBackground {
-    0%{background-position: 0px 0px;}
-
-    50%{background-position: 100px 0px;}
-
-    100%{background-position: 0px 0px;}
-
+.Container2 > div {
+	width: 25%;
 }
-.Container2 > .button > a{
-    color: white;
-    text-decoration: none;
+.Container2 > div > h1{
+	margin-left: 25px;
 }
-@keyframes AnimationBackground2 {
-    0%{background-position: 0px 0px;}
-
-    50%{background-position: 100px 0px;}
-
-    100%{background-position: 0px 0px;}
-
+/* The arrow config starts here here -> */
+.Container2 > div > div {
+	width: 0px;
+	height: 0px;
+	margin-left: 25px;
+	margin-top: 5px;
+	transition: 2s ease;
+	border-top: 15px solid transparent;
+	border-left: 25px solid white;
+	border-bottom: 15px solid transparent;
 }
-.Container2 > .button:hover{
-    animation: AnimationBackground infinite 5s ease;
-    padding: 50px;
+.Container2 > div > div:hover {
+	transform: rotate(90deg);
+	cursor: pointer;
 }
+.Container2 > div > h1,p {
+	margin-left: 25px;
+}
+/* <- The arrow config ends here */
+/*	End the container holding all the bars	*/
+
+/*	This is the section related to each containers in the bar thing	*/
+/*	Start individual bar section	*/
+.Container2 > div:nth-child(1){
+	background-color: #B8B3B5;
+	width: 3%;
+	transition: 2s ease;
+	padding-right: 25px;
+	overflow: hidden;
+}
+.Container2 > div:nth-child(2){
+	background-color: #ABAAAB;
+	transition: 2s ease;
+	width: 5%;
+	overflow: hidden;
+}
+.Container2 > div:nth-child(3){
+	background-color: #9A9A9A;
+}
+.Container2 > div:nth-child(4){
+	background-color: #8A8A8A;
+}
+
+/*	End individual bar section	*/
+
+/*	Start bar 1 configuration	*/
+
+.Container2 > div:nth-child(1) > h1 {
+	transition: 2s ease;
+	transform: translate(-130px);
+}
+.Container2 > div:nth-child(1) > p {
+	transition: 2s ease;
+	transition-delay: 0.5s;
+	transform: translate(-330px);
+}
+.Container2 > div:nth-child(1):has(div:hover) {
+	width: 25%;
+}
+.Container2 > div:nth-child(1):not(:has(div:hover)) {
+	transition-delay: 0.5s;
+}
+.Container2 > div:nth-child(1):has(div:hover) > h1 {
+	transform: translate(4px);
+}
+.Container2 > div:nth-child(1):has(div:hover) > p {
+	transform: translate(4px);
+}
+
+/*	End bar 1 configuration		*/
+
+/*	Start bar 2 configuration	*/
+.Container2 > div:nth-child(2) > h1,ul {
+	transition: 2s ease;
+	transform: translate(-135px);
+}
+.Container2 > div:nth-child(2) > ul {
+	transition: 2s ease;
+	transition-delay: 0.5s;
+}
+.Container2 > div:nth-child(2):has(div:hover) {
+	width: 25%;
+}
+.Container2 > div:nth-child(2):not(:has(div:hover)) {
+	transition-delay: 0.5s;
+}
+.Container2 > div:nth-child(2):has(div:hover) > h1 {
+	transform: translate(4px);
+}
+.Container2 > div:nth-child(2):has(div:hover) > ul {
+	transform: translate(4px);
+}
+.Container2 > div:nth-child(2) > ul > li{
+	list-style-type: none;
+}
+/*	End bar 2 configuration		*/
+
+/*	Start bar 3 configuration	*/
+/*	End bar 3 configuration		*/
+
+/*	Start bar 4 configuration	*/
+/*	End bar 4 configuration		*/
+
 table{
     color: white;
     width: 100%;
