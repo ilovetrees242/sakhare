@@ -1,0 +1,16 @@
+#!/bin/sh
+LFSPKGNAME="which"
+LFSPKGVERSION="2.23"
+LFSPKG="$LFSPKGNAME-$LFSPKGVERSION"
+LFSPKGREPO="https://ilovetrees242.github.io/DevHelp/Website/Packages"
+
+build(){
+	wget $LFSPKGREPO/$LFSPKG.tar.?z
+	tar xvf $LFSPKG.tar.?z
+	pushd $LFS
+		./configure --prefix=/usr 
+		make
+		make install
+	popd
+	rm -rf $LFSPKG*
+}

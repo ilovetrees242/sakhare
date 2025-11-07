@@ -3,14 +3,14 @@ body{
     padding: 0;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-weight: lighter;
-    background-color: black;
+    background-color: #161515;
 }
 *{
 	font-weight: bold;
 	color: white;
 }
 .Container1{
-    background: linear-gradient(45deg, black, #ECE6E9 );
+    background: linear-gradient(45deg, #161515, #ECE6E9 );
     padding-top: 25px;
     padding-bottom: 25px;
 }
@@ -22,6 +22,7 @@ body{
 .navbar{
     color: white;
     margin: 0;
+    background-color: #E5DFE2;
     padding: 0;
     overflow: hidden;
 }
@@ -53,6 +54,7 @@ body{
     display: inline-flex;
     padding-left: 50px;
     padding-right: 50px;
+    background-color: red;
 }
 /*   	This is the section related to the long bar things	*/
 
@@ -108,9 +110,15 @@ body{
 }
 .Container2 > div:nth-child(3){
 	background-color: #9A9A9A;
+	transition: 2s ease;
+	width: 5%;
+	overflow: hidden;
 }
 .Container2 > div:nth-child(4){
 	background-color: #8A8A8A;
+	transition: 2s ease;
+	width: 5%;
+	overflow: hidden;
 }
 
 /*	End individual bar section	*/
@@ -142,35 +150,105 @@ body{
 /*	End bar 1 configuration		*/
 
 /*	Start bar 2 configuration	*/
-.Container2 > div:nth-child(2) > h1,ul {
+.Container2 > div:nth-child(2) > h1 {
 	transition: 2s ease;
-	transform: translate(-135px);
+	transform: translate(-215px);
 }
 .Container2 > div:nth-child(2) > ul {
-	transition: 2s ease;
-	transition-delay: 0.5s;
+	transform: translate(-355px);
 }
 .Container2 > div:nth-child(2):has(div:hover) {
 	width: 25%;
+	padding-right: 30px;
 }
 .Container2 > div:nth-child(2):not(:has(div:hover)) {
-	transition-delay: 0.5s;
+	transition-delay: 2s;
 }
 .Container2 > div:nth-child(2):has(div:hover) > h1 {
 	transform: translate(4px);
 }
-.Container2 > div:nth-child(2):has(div:hover) > ul {
+.Container2 > div:nth-child(2) > ul:nth-of-type(1){
+	transition: 1s ease;
+	transition-delay: 0.5s;
+}
+.Container2 > div:nth-child(2) > ul:nth-of-type(2){
+	transition: 1s ease;
+	transition-delay: 1s;
+}
+.Container2 > div:nth-child(2) > ul:nth-of-type(3){
+	transition: 1s ease;
+	transition-delay: 1.5s;
+}
+.Container2 > div:nth-child(2) > ul:nth-of-type(4){
+	transition: 1s ease;
+	transition-delay: 2s;
+}
+.Container2 > div:nth-child(2):has(div:hover) > ul:nth-of-type(1) {
+	transform: translate(4px);
+}
+.Container2 > div:nth-child(2):has(div:hover) > ul:nth-of-type(2) {
+	transform: translate(4px);
+}
+.Container2 > div:nth-child(2):has(div:hover) > ul:nth-of-type(3) {
+	transform: translate(4px);
+}
+.Container2 > div:nth-child(2):has(div:hover) > ul:nth-of-type(4) {
 	transform: translate(4px);
 }
 .Container2 > div:nth-child(2) > ul > li{
-	list-style-type: none;
+	list-style-type: disc;
+	margin-top: 25px;
 }
 /*	End bar 2 configuration		*/
 
 /*	Start bar 3 configuration	*/
+.Container2 > div:nth-child(3) > h1 {
+	transition: 2s ease;
+	transform: translate(-210px);
+}
+.Container2 > div:nth-child(3) > p {
+	transition: 2s ease;
+	transition-delay: 0.5s;
+	transform: translate(-330px);
+}
+.Container2 > div:nth-child(3):has(div:hover) {
+	width: 25%;
+}
+.Container2 > div:nth-child(3):not(:has(div:hover)) {
+	transition-delay: 0.5s;
+}
+.Container2 > div:nth-child(3):has(div:hover) > h1 {
+	transform: translate(4px);
+}
+.Container2 > div:nth-child(3):has(div:hover) > p {
+	transform: translate(4px);
+}
 /*	End bar 3 configuration		*/
 
 /*	Start bar 4 configuration	*/
+.Container2 > div:nth-child(4) > h1 {
+	transition: 2s ease;
+	color: white;
+	transform: translate(-210px);
+}
+.Container2 > div:nth-child(4) > p {
+	transition: 2s ease;
+	transition-delay: 0.5s;
+	transform: translate(-330px);
+}
+.Container2 > div:nth-child(4):has(div:hover) {
+	width: 25%;
+	padding-right: 25px;
+}
+.Container2 > div:nth-child(4):not(:has(div:hover)) {
+	transition-delay: 0.5s;
+}
+.Container2 > div:nth-child(4):has(div:hover) > h1 {
+	transform: translate(4px);
+}
+.Container2 > div:nth-child(4):has(div:hover) > p {
+	transform: translate(4px);
+}
 /*	End bar 4 configuration		*/
 
 table{
