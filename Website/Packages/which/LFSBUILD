@@ -6,7 +6,8 @@ LFSPKGREPO="https://ilovetrees242.github.io/DevHelp/Website/Packages"
 
 case $1 in
 	build)
-		wget $LFSPKGREPO/$LFSPKG.tar.?z
+		wget $LFSPKGREPO/$LFSPKGNAME/$LFSPKG.tar.gz
+		sleep 1
 		tar xvf $LFSPKG.tar.?z
 		pushd $LFSPKG
 			./configure --prefix=/usr 

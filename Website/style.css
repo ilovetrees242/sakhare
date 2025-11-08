@@ -10,7 +10,7 @@ body{
 	color: white;
 }
 .Container1{
-    background: linear-gradient(45deg, #161515, #ECE6E9 );
+    background: linear-gradient(45deg, #161515, #363636 );
     padding-top: 25px;
     padding-bottom: 25px;
 }
@@ -25,12 +25,12 @@ body{
 	top: 0;
 	width: 100%;
 	border-radius: 10px;
-	background-color: #E6E0E3;
-	box-shadow: 0px 0px 55px #E6E0E3;
+	background-color: #252526;
+	box-shadow: 0px 0px 5px 5px #151516;
 	text-align: left;
 }
 .navbar > .navbtn {
-	background: linear-gradient(45deg, #ACA8AA, #DFDADD);
+	background-color: #1C1B1C;
 	display: inline-flex;
 	width: 150px;
 	justify-content: center;
@@ -47,7 +47,7 @@ body{
 	border-radius: 15px;
 	padding-left: 25px;
 	padding-right: 25px;
-	background: linear-gradient(45deg, #B8B3B5, #E0DADD);
+	background-color: #1C1B1C;
 }
 .navbar > a {
 	text-align: center;
@@ -56,6 +56,7 @@ body{
 .navbar > .navbtn:hover {
 	width: 250px;
 	cursor: pointer;
+	background-color: #2C2B2C;
 }
 .navbar > .design {
 	padding: 15px;
@@ -68,7 +69,7 @@ body{
 	border-radius: 10px;
 }
 .navbar > .panel {
-	background-color: #E5DFE2;
+	background-color: #161515;
 	width: 50%;
 	height: 250px;
 	display: block;
@@ -83,32 +84,35 @@ body{
 .navbar:has(.navbtn:hover) > .panel {
 	transform: translate(4px);
 	display: block;
+	box-shadow: 0px 0px 50px 20px #212121;
 }
 .navbar > .design:nth-of-type(3){
 	margin-left: 100px;
-	background-color: #B8B3B5;
+	background-color: #363636;
 }
 .navbar > .design:nth-of-type(4){
-	background-color: #CACACA;
+	background-color: #151516;
 }
 .navbar > .design:nth-of-type(5){
-	background-color: #CFCFCF;
+	background-color: #050506;
 }
 .navbar > .design:nth-of-type(6){
-	background-color: #4A4A4A;
+	background-color: #3A3A3A;
 }
 .navbar > .design:nth-of-type(7){
 	background-color: #5A5A5A;
 }
 .navbar > .design:nth-of-type(8){
-	background-color: #6A6A6A;
+	background-color: #212121;
 }
 .navbar > .panel:hover {
 	display: block;
 	transform: translate(4px);
+	box-shadow: 0px 0px 55px 20px #212121;
 }
 .navbar > .panel > a > div:hover {
 	cursor: pointer;
+	background-color: #050506;
 }
 .navbar > .panel > a {
 	text-align: center;
@@ -122,14 +126,11 @@ body{
 .navbar > .panel > a > div {
 	padding: 25px;
 	width: 90%;
-	background-color: #EFE6E9;
+	background-color: #1C1B1C;
 	margin-top: 5px;
 	border-radius: 10px;
 	margin: 0 auto;
 	transition: 0.5s ease;
-}
-.navbar > .panel > a > div:hover {
-	background-color: #CFCFCF;
 }
 /*   	This is the section related to the long bar things	*/
 /*	Start the container holding all the bars	*/
@@ -142,6 +143,7 @@ body{
 }
 .Container2 > div {
 	width: 25%;
+	padding-right: 5px;
 }
 .Container2 > div > h1{
 	margin-left: 25px;
@@ -170,26 +172,26 @@ body{
 /*	This is the section related to each containers in the bar thing	*/
 /*	Start individual bar section	*/
 .Container2 > div:nth-child(1){
-	background-color: #B8B3B5;
+	background-color: #202020;
 	width: 3%;
 	transition: 2s ease;
 	padding-right: 25px;
 	overflow: hidden;
 }
 .Container2 > div:nth-child(2){
-	background-color: #ABAAAB;
+	background-color: #3A3A3A;
 	transition: 2s ease;
 	width: 5%;
 	overflow: hidden;
 }
 .Container2 > div:nth-child(3){
-	background-color: #9A9A9A;
+	background-color: #434343;
 	transition: 2s ease;
 	width: 5%;
 	overflow: hidden;
 }
 .Container2 > div:nth-child(4){
-	background-color: #8A8A8A;
+	background-color: #5C5C5C;
 	transition: 2s ease;
 	width: 5%;
 	overflow: hidden;
@@ -287,6 +289,7 @@ body{
 }
 .Container2 > div:nth-child(3):has(div:hover) {
 	width: 25%;
+	padding-right: 15px;
 }
 .Container2 > div:nth-child(3):not(:has(div:hover)) {
 	transition-delay: 0.5s;
@@ -324,16 +327,25 @@ body{
 	transform: translate(4px);
 }
 /*	End bar 4 configuration		*/
-
+/*	Start bar 5 (about) configuration	*/
+.Container2 > .about {
+	background-color: #212121;
+	width: 100%;
+	overflow: scroll;
+}
+.Container2 > .about > * {
+	margin-left: 15px;
+}
+/*	End bar 5 (about) configuration		*/
 table{
     color: white;
     width: 100%;
     text-align: center;
     border-collapse: collapse;
-    background: linear-gradient(45deg, black, rgb(98, 0, 255));
+    background: linear-gradient(45deg, #151516, #252526);
 }
 th{
-    background-color: rgb(98, 0, 255);
+    background-color: #252526;
 }
 td, th{
     padding: 25px;

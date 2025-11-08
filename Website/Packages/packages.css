@@ -1,0 +1,147 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: lighter;
+    background-color: #161515;
+}
+*{
+	font-weight: bold;
+	color: white;
+}
+.Container1{
+    background: linear-gradient(45deg, #161515, #363636 );
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+.introduction{
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: white;
+}
+.navbar{
+	color: white;
+	position: sticky;
+	top: 0;
+	width: 100%;
+	border-radius: 10px;
+	background-color: #252526;
+	box-shadow: 0px 0px 5px 5px #151516;
+	text-align: left;
+}
+.navbar > .navbtn {
+	background-color: #1C1B1C;
+	display: inline-flex;
+	width: 150px;
+	justify-content: center;
+	align-items: center;
+	transition: 2s ease;
+	border-radius: 15px;
+	padding: 15px;
+	margin-top: 5px;
+}
+.navbar > a > .logo {
+	display: inline-flex;
+	padding: 15px;
+	margin-left: 5px;
+	border-radius: 15px;
+	padding-left: 25px;
+	padding-right: 25px;
+	background-color: #1C1B1C;
+}
+.navbar > a {
+	text-align: center;
+	text-decoration: none;
+}
+.navbar > .navbtn:hover {
+	width: 250px;
+	cursor: pointer;
+	background-color: #2C2B2C;
+}
+.navbar > .design {
+	padding: 15px;
+	margin: 0px;
+	display: inline-block;
+	margin-bottom: 5px;
+	width: 30px;
+	color: white;
+	text-align: center;
+	border-radius: 10px;
+}
+.navbar > .panel {
+	background-color: #161515;
+	width: 50%;
+	height: 250px;
+	display: block;
+	position: absolute;
+	border-radius: 10px;
+	margin-top: 65px;
+	margin-left: 5px;
+	display: block;
+	transition: 2s ease;
+	transform: translate(-1500px);
+}
+.navbar:has(.navbtn:hover) > .panel {
+	transform: translate(4px);
+	display: block;
+	box-shadow: 0px 0px 50px 20px #212121;
+}
+.navbar > .design:nth-of-type(3){
+	margin-left: 100px;
+	background-color: #363636;
+}
+.navbar > .design:nth-of-type(4){
+	background-color: #151516;
+}
+.navbar > .design:nth-of-type(5){
+	background-color: #050506;
+}
+.navbar > .design:nth-of-type(6){
+	background-color: #3A3A3A;
+}
+.navbar > .design:nth-of-type(7){
+	background-color: #5A5A5A;
+}
+.navbar > .design:nth-of-type(8){
+	background-color: #212121;
+}
+.navbar > .panel:hover {
+	display: block;
+	transform: translate(4px);
+	box-shadow: 0px 0px 55px 20px #212121;
+}
+.navbar > .panel > a > div:hover {
+	cursor: pointer;
+	background-color: #050506;
+}
+.navbar > .panel > a {
+	text-align: center;
+	margin-bottom: 5px;
+	margin-top: 10px;
+	display: flex;
+	justify-content: center;
+	text-decoration: none;
+	align-items: center;
+}
+.navbar > .panel > a > div {
+	padding: 25px;
+	width: 90%;
+	background-color: #1C1B1C;
+	margin-top: 5px;
+	border-radius: 10px;
+	margin: 0 auto;
+}
+.reponame {
+	font-size: 72px;
+	margin-left: 25px;
+}
+.reponame > b {
+	font-size: 72px;
+	background: -webkit-linear-gradient(45deg, #363636, #ffffff);
+  	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+.pkg {
+	text-decoration: none;
+	margin-left: 25px;
+}
