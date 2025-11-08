@@ -20,44 +20,116 @@ body{
     color: white;
 }
 .navbar{
-    color: white;
-    margin: 0;
-    background-color: #E5DFE2;
-    padding: 0;
-    overflow: hidden;
+	color: white;
+	position: sticky;
+	top: 0;
+	width: 100%;
+	border-radius: 10px;
+	background-color: #E6E0E3;
+	box-shadow: 0px 0px 55px #E6E0E3;
+	text-align: left;
 }
-.navbar > ul{
-     display: flex;
-     justify-content: center;
-     align-items: center;
-}
-.navbar > ul > div {
-     background: #161515;
-     padding: 5px;
-     border-radius: 10px;
-}
-.navbar > ul > div > li > a {
-	text-align: center;
-	text-decoration: none;
-	color: #E0DADD;
-	width: 250px;
-	padding-bottom: 5px;
+.navbar > .navbtn {
+	background: linear-gradient(45deg, #ACA8AA, #DFDADD);
+	display: inline-flex;
+	width: 150px;
+	justify-content: center;
+	align-items: center;
 	transition: 2s ease;
-	overflow: hidden;
+	border-radius: 15px;
+	padding: 15px;
+	margin-top: 5px;
 }
-.navbar > ul > div > li > a:hover{
+.navbar > a > .logo {
+	display: inline-flex;
+	padding: 15px;
+	margin-left: 5px;
+	border-radius: 15px;
+	padding-left: 25px;
+	padding-right: 25px;
+	background: linear-gradient(45deg, #B8B3B5, #E0DADD);
+}
+.navbar > a {
+	text-align: center;
+}
+.navbar > .navbtn:hover {
+	width: 250px;
 	cursor: pointer;
-	text-decoration: none;
 }
-.navbar > ul > div > li{
-    list-style-type: none;
-    display: inline-flex;
-    padding-left: 50px;
-    padding-right: 50px;
-    background-color: red;
+.navbar > .design {
+	padding: 15px;
+	margin: 0px;
+	display: inline-block;
+	margin-bottom: 5px;
+	width: 30px;
+	color: white;
+	text-align: center;
+	border-radius: 10px;
+}
+.navbar > .panel {
+	background-color: #E5DFE2;
+	width: 50%;
+	height: 250px;
+	display: block;
+	position: absolute;
+	border-radius: 10px;
+	margin-top: 65px;
+	margin-left: 5px;
+	display: block;
+	transition: 2s ease;
+	transform: translate(-1500px);
+}
+.navbar:has(.navbtn:hover) > .panel {
+	transform: translate(4px);
+	display: block;
+}
+.navbar > .design:nth-of-type(3){
+	margin-left: 100px;
+	background-color: #B8B3B5;
+}
+.navbar > .design:nth-of-type(4){
+	background-color: #CACACA;
+}
+.navbar > .design:nth-of-type(5){
+	background-color: #CFCFCF;
+}
+.navbar > .design:nth-of-type(6){
+	background-color: #4A4A4A;
+}
+.navbar > .design:nth-of-type(7){
+	background-color: #5A5A5A;
+}
+.navbar > .design:nth-of-type(8){
+	background-color: #6A6A6A;
+}
+.navbar > .panel:hover {
+	display: block;
+	transform: translate(4px);
+}
+.navbar > .panel > a > div:hover {
+	cursor: pointer;
+}
+.navbar > .panel > a {
+	text-align: center;
+	margin-bottom: 5px;
+	margin-top: 10px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.navbar > .panel > a > div {
+	padding: 25px;
+	width: 90%;
+	background-color: #EFE6E9;
+	margin-top: 5px;
+	border-radius: 10px;
+	margin: 0 auto;
+	transition: 0.5s ease;
+}
+.navbar > .panel > a > div:hover {
+	background-color: #CFCFCF;
 }
 /*   	This is the section related to the long bar things	*/
-
 /*	Start the container holding all the bars	*/
 .Container2 {
     width: 75%;
