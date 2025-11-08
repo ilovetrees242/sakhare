@@ -51,6 +51,7 @@ body{
 }
 .navbar > a {
 	text-align: center;
+	text-decoration: none;
 }
 .navbar > .navbtn:hover {
 	width: 250px;
@@ -115,6 +116,7 @@ body{
 	margin-top: 10px;
 	display: flex;
 	justify-content: center;
+	text-decoration: none;
 	align-items: center;
 }
 .navbar > .panel > a > div {
