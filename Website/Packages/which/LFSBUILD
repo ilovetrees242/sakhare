@@ -3,7 +3,7 @@ LFSPKGNAME="which"
 LFSPKGVERSION="2.23"
 LFSPKG="$LFSPKGNAME-$LFSPKGVERSION"
 LFSPKGREPO="https://ilovetrees242.github.io/DevHelp/Website/Packages"
-
+DEPENDS=""
 case $1 in
 	build)
 		wget $LFSPKGREPO/$LFSPKGNAME/$LFSPKG.tar.gz
@@ -14,7 +14,7 @@ case $1 in
 			make
 			make install
 		popd
-		rm -rf $LFSPKG*
+		rm -rf $LFSPKGNAME*
 	;;
 	uninstall)
 		rm /usr/bin/which
