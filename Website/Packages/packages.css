@@ -9,16 +9,6 @@ body{
 	font-weight: bold;
 	color: white;
 }
-.Container1{
-    background: linear-gradient(45deg, #161515, #363636 );
-    padding-top: 25px;
-    padding-bottom: 25px;
-}
-.introduction{
-    text-align: center;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    color: white;
-}
 .navbar{
 	color: white;
 	position: sticky;
@@ -69,17 +59,18 @@ body{
 	border-radius: 10px;
 }
 .navbar > .panel {
-	background-color: #161515;
-	width: 50%;
-	height: 250px;
+	background-color: rgba(15, 15, 15, 0.5);
+	backdrop-filter: blur(8px);
+	width: 100%;
+	text-align: left;
+	height: 100vh;
 	display: block;
 	position: absolute;
-	border-radius: 10px;
-	margin-top: 65px;
-	margin-left: 5px;
+	border-radius: 0px;
+	margin-top: 55px;
 	display: block;
 	transition: 2s ease;
-	transform: translate(-1500px);
+	transform: translate(-2500px);
 }
 .navbar:has(.navbtn:hover) > .panel {
 	transform: translate(4px);
@@ -112,36 +103,53 @@ body{
 }
 .navbar > .panel > a > div:hover {
 	cursor: pointer;
-	background-color: #050506;
+	display: inline-flex;
+	justify-content: left;
+	align-items: left;
+	background-color: #252526;
 }
 .navbar > .panel > a {
-	text-align: center;
-	margin-bottom: 5px;
-	margin-top: 10px;
+	text-align: left;
 	display: flex;
-	justify-content: center;
+	justify-content: left;
 	text-decoration: none;
-	align-items: center;
+	align-items: left;
 }
 .navbar > .panel > a > div {
 	padding: 25px;
-	width: 90%;
+	width: 100%;
 	background-color: #1C1B1C;
-	margin-top: 5px;
-	border-radius: 10px;
 	margin: 0 auto;
+	transition: 0.5s ease;
 }
 .reponame {
-	font-size: 72px;
-	margin-left: 25px;
+	font-size: 85px;
 }
 .reponame > b {
 	font-size: 72px;
-	background: -webkit-linear-gradient(45deg, #363636, #ffffff);
-  	-webkit-background-clip: text;
+	background: -webkit-linear-gradient(45deg, #fff, #151515);
+	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
 }
-.pkg {
+.pkgbox {
+	background-color: #ffffff;
+	width: 70%;
+	margin: 5px;
+	height: 500px;
+	border-radius: 15px;
+}
+.pkgbox > .pkg {
+	color: #1C1B1C;
 	text-decoration: none;
+	margin: 25px;
+	font-size: 50px;
+
+}
+.pkgbox > * {
+	color: black;
+	font-size: 15px;
 	margin-left: 25px;
+}
+.pkgbox > p > b {
+	color: #6a6a6a;
 }

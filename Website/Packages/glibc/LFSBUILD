@@ -1,0 +1,9 @@
+#!/bin/sh
+LFSPKGREPO="https://ilovetrees242.github.io/DevHelp/Website/Packages"
+LFSPKGNAME="glibc"
+LFSPKGVERSION="2.42"
+LFSPKG="$LFSPKGNAME-$LFSPKGVERSION"
+
+case $1 in 
+	build)
+		tar xvf $LFSPKG
